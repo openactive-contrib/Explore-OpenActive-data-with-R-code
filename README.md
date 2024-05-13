@@ -241,7 +241,7 @@ data["next"]
 
 #Using the earlier function, we can call this new url:
 
-d <- callURL(data["next"])
+d <- callURL(as.character(data["next"]))
 next_page = fromJSON(rawToChar(d$content),flatten = T)
 rm(d)
 glimpse(next_page)
